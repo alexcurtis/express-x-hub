@@ -1,0 +1,29 @@
+{
+  "name": "express-x-hub",
+  "version": "0.0.1",
+  "description": "X-Hub-Signature Express Middleware",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexcurtis/express-x-hub.git"
+  },
+  "keywords": [
+    "express",
+    "x-hub",
+    "xhub",
+    "signature",
+    "facebook",
+    "realtime",
+    "updates",
+    "payment"
+  ],
+  "author": {
+    "name": "Alex Curtis",
+    "email": ""
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexcurtis/express-x-hub/issues"
+  },
+  "homepage": "https://github.com/alexcurtis/express-x-hub"
+}

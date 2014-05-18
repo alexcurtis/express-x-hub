@@ -1,13 +1,13 @@
 {
-  "name": "express-x-hub",
-  "version": "0.0.1",
-  "description": "X-Hub-Signature Express Middleware",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/alexcurtis/express-x-hub.git"
-  },
-  "keywords": [
+    "name": "express-x-hub",
+    "version": "0.0.1",
+    "description": "X-Hub-Signature Express Middleware",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alexcurtis/express-x-hub.git"
+    },
+    "keywords": [
     "express",
     "x-hub",
     "xhub",
@@ -16,14 +16,23 @@
     "realtime",
     "updates",
     "payment"
-  ],
-  "author": {
-    "name": "Alex Curtis",
-    "email": ""
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alexcurtis/express-x-hub/issues"
-  },
-  "homepage": "https://github.com/alexcurtis/express-x-hub"
+    ],
+    "author": {
+        "name": "Alex Curtis",
+        "email": ""
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/alexcurtis/express-x-hub/issues"
+    },
+    "homepage": "https://github.com/alexcurtis/express-x-hub",
+    "devDependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-jshint": "~0.10.0",
+        "grunt-contrib-watch": "~0.6.1"
+    },
+    "dependencies": {
+        "raw-body": "~1.1.3",
+        "type-is": "~1.1.0"
+    }
 }

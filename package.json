@@ -1,6 +1,6 @@
 {
     "name": "express-x-hub",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "X-Hub-Signature Express Middleware",
     "main": "index.js",
     "repository": {
@@ -12,6 +12,7 @@
     "x-hub",
     "xhub",
     "signature",
+    "middleware",
     "facebook",
     "realtime",
     "updates",

@@ -1,4 +1,4 @@
-express-x-hub-signature
+Express X-Hub
 =======================
 
 X-Hub-Signature Express.js Middleware. A compact way to validate X-Hub requests to ensure they have not been tampered with. Particularly useful for Facebook Realtime Updates.

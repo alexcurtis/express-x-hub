@@ -7,7 +7,7 @@ X-Hub-Signature Express.js Middleware. A compact way to validate X-Hub requests 
 Install the middleware with this command:
 
 ```shell
-bower install express-x-hub --save
+npm install express-x-hub --save
 ```
 
 Then add the middleware to Express.js. It needs to be one of the first and before `bodyParser()`.

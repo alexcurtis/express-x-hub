@@ -1,6 +1,9 @@
 Express X-Hub
 =======================
 
+[![Build Status](https://travis-ci.org/alexcurtis/express-x-hub.svg?branch=master)](https://travis-ci.org/alexcurtis/express-x-hub) [![Coverage Status](https://img.shields.io/coveralls/alexcurtis/express-x-hub.svg)](https://coveralls.io/r/alexcurtis/express-x-hub?branch=master)
+
+
 X-Hub-Signature Express.js Middleware. A compact way to validate X-Hub requests to ensure they have not been tampered with. Particularly useful for Facebook Realtime Updates.
 
 ## Getting Started
@@ -43,6 +46,12 @@ var isValid = req.isXHubValid();
 if(!isValid){ return this.reject('Invalid X-Hub Request', req, res); }
 ```
 If its valid, then the request has not been tampered with and you are safe to process it.
+
+
+## Build
+
+1. `npm test` - Run tests.
+2. `gulp` - Lint and run tests.
 
 ## Options
 

@@ -3,8 +3,7 @@ Express X-Hub
 
 [![Build Status](https://travis-ci.org/alexcurtis/express-x-hub.svg?branch=master)](https://travis-ci.org/alexcurtis/express-x-hub) [![Coverage Status](https://img.shields.io/coveralls/alexcurtis/express-x-hub.svg)](https://coveralls.io/r/alexcurtis/express-x-hub?branch=master)
 
-
-X-Hub-Signature Express.js Middleware. A compact way to validate X-Hub requests to ensure they have not been tampered with. Particularly useful for Facebook Realtime Updates.
+X-Hub-Signature Express.js Middleware. A compact way to validate X-Hub requests to ensure they have not been tampered with. Particularly useful for Facebook real-time updates and GitHub web hooks.
 
 ## Getting Started
 Install the middleware with this command:
@@ -22,7 +21,7 @@ app.use(bodyParser());
 app.use(methodOverride());
 ```
 
-Where `XHUB_SECRET_HERE` is your facebook client secret.
+Where `XHUB_SECRET_HERE` is your platform's (facebook, github, etc) secret.
 
 This will add some special sauce to your `req` object:
 

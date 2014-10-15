@@ -53,6 +53,26 @@ If its valid, then the request has not been tampered with and you are safe to pr
 1. `npm test` - Run tests.
 2. `gulp` - Lint and run tests.
 
+## Example
+
+Some very simple examples can be found in the `example` dir.
+
+Start the server:
+
+```shell
+node ./example/server.js
+```
+
+Curl in an emulated X-Hub post:
+
+```shell
+sh ./example/curl_valid.sh
+>> { "success": "X-Hub Is Valid" }
+
+sh ./example/curl_invalid.sh
+>> { "error": "X-Hub Is Invalid" }
+```
+
 ## Options
 
 ### secret ```string``` - required

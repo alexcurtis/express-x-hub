@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var mocha = require('gulp-mocha');
 
-var libs = 'lib/**/*.js';
+var libs = ['lib/**/*.js', 'example/**/*.js'];
 var tests = './test/*.js';
 
 gulp.task('jshint', function() {

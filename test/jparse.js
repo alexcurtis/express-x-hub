@@ -1,8 +1,10 @@
+/*  eslint no-unused-expressions:0  */
+
 'use strict';
 
 var jparse = require('../lib/jparse');
 
-describe('xhub.jparse', function () {
+describe('xhub.jparse', function(){
 
     it('should throw when buffer is undefined', function(){
         (jparse).should.throw(Error);

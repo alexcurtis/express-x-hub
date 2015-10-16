@@ -1,8 +1,10 @@
+/*  eslint no-unused-expressions:0  */
+
 'use strict';
 
 var error = require('../lib/error');
 
-describe('xhub.error', function () {
+describe('xhub.error', function(){
 
     it('should return an Error Object', function(){
         var err = error();

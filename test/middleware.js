@@ -1,27 +1,25 @@
+/*  eslint no-unused-expressions:0  */
+
 'use strict';
 
 var middleware = require('../lib/middleware');
-
 var Readable = require('stream').Readable;
-var _ = require('underscore');
 
 var createRequest = function(signature, type, body, length){
     var req = new Readable();
-    _.extend(req, {
-        headers: {
-            'content-type': type || 'application/json',
-            'transfer-encoding': 'chunked',
-            'X-Hub-Signature': signature,
-            'content-length': length || (body ? body.length : 0)
-        },
-        header: function(name){
-            return this.headers[name];
-        },
-        _read: function(){
-            this.push(body);
-            this.push(null);
-        }
-    });
+    req.headers = {
+        'content-type': type || 'application/json',
+        'transfer-encoding': 'chunked',
+        'X-Hub-Signature': signature,
+        'content-length': length || (body ? body.length : 0)
+    };
+    req.header = function(name){
+        return this.headers[name];
+    };
+    req._read = function(){
+        this.push(body);
+        this.push(null);
+    };
     return req;
 };
 
@@ -115,7 +113,7 @@ describe('xhub.middleware', function(){
         });
     });
 
-    //End-To-End Tests
+    // End-To-End Tests
 
     it('should not return an error when the request is correct', function(done){
         var body = '{ "id": "realtime_update" }';
@@ -126,7 +124,7 @@ describe('xhub.middleware', function(){
             secret: 'my_little_secret'
         });
         middle(req, null, function(err){
-            should.not.exist(err);
+            global.should.not.exist(err);
             done();
         });
     });
@@ -171,7 +169,7 @@ describe('xhub.middleware', function(){
             req.isXHubValid().should.be.true;
             done();
         });
-    });    
+    });
 
     it('should set isXHubValid to false when the request signature is invalid ', function(done){
         var body = '{ "id": "realtime_update" }';
@@ -185,6 +183,6 @@ describe('xhub.middleware', function(){
             req.isXHubValid().should.be.false;
             done();
         });
-    }); 
+    });
 
 });

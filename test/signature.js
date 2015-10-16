@@ -64,4 +64,11 @@ describe('xhub.signature', function () {
         sig.isValid('random-signature-body').should.be.true;
     });
 
+    it('should return true when body contains UTF-8 chars and the signatures match', function(){
+        var xhub = 'sha1=6eca52592dced2ec4b9c974538d6bb32e25ab897';
+        var secret = 'my_little_secret';
+        var sig = new signature(xhub, { secret: secret });
+        sig.isValid('random-utf-8-あいうえお-body').should.be.true;
+    });
+
 });
